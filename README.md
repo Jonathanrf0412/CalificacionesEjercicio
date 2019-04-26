@@ -16,7 +16,7 @@ _-Seleccionas donde quiere que se guarde localmente el proyecto y das clic en el
 
 _-Una vez que la descarga finalice podrás observar la opción del repositorio más abajo, al seleccionarla se cargaran los archivos y es cuestión de que des doble clic en el archivo de solución llamado "CalificacionesEjercicio.sln". Y todo listo ¡ya tienes el proyecto funcionando!_
 
-### Pre-requisitos 📋
+## Pre-requisitos 📋
 _Para poder obtener una copia del proyecto será necesario tener instaladas las siguientes herramientas:_
 
 _-Visual Studio 2017. (de preferencia) https://visualstudio.microsoft.com/es/downloads/_
