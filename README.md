@@ -1,5 +1,5 @@
 # Ejercicio de Conduent "Calificaciones"
-_Este proyecto es más que nada un pequeño ejercicio que trata de la lectura de un archivo de Excel para visualización de su información en una aplicación, así como algunos cálculos a partir de la misma._
+_Este proyecto es más que nada un pequeño ejercicio que trata de la lectura de un archivo de Excel para visualización de su información en una aplicación, así como algunos cálculos a partir de la misma. Además de la utilización de un api para la obtención del clima._
 
 ## Comenzando 🚀
 _Para obtener una copia del proyecto te sugiero sigas estos pasos:_
