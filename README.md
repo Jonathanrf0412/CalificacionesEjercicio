@@ -30,15 +30,18 @@ _El sistema lleva a cabo un par de acciones sencillas que se representan en el s
 
 _-Visualización de la información de un Excel en formato especifico tanto en tabla como en gráfica._
 
-_-Obtención del nombre del alumno con la nota más alta._
+_-Obtención del los nombres de los alumnos con la nota más alta._
 
-_-Obtención del nombre del alumno con la nota más baja._
+_-Obtención del los nombres de los alumnos con la nota más baja._
 
-_-Obtención del nombre del promedio de todos los alumnos._
+_-Obtención de un promedio global, así como por grupo._
 
 _-Creación de una clave única de cada estudiante en base a su nombre y edad._
 
 _-Obtención de la temperatura actual de Hermosillo, la cual se actualizara automáticamente cada minuto._
+
+## Api del clima utilizado
+_Para la obtención de la información del clima se utilizó el api de Open Weather Map la cual podemos ver más detalladamente en el siguiente link: https://openweathermap.org/_
 
 ## Autores ✒️
 _Jonathan Isaac Rodríguez Félix_
