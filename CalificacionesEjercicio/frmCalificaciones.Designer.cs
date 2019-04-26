@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCalificaciones));
             this.dgvInfo = new System.Windows.Forms.DataGridView();
             this.lblArchivoInfo = new System.Windows.Forms.Label();
@@ -77,14 +77,14 @@
             this.dgvInfo.AllowUserToAddRows = false;
             this.dgvInfo.AllowUserToDeleteRows = false;
             this.dgvInfo.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombres,
@@ -99,7 +99,7 @@
             this.dgvInfo.Location = new System.Drawing.Point(12, 39);
             this.dgvInfo.Name = "dgvInfo";
             this.dgvInfo.RowHeadersVisible = false;
-            this.dgvInfo.Size = new System.Drawing.Size(661, 337);
+            this.dgvInfo.Size = new System.Drawing.Size(661, 379);
             this.dgvInfo.TabIndex = 0;
             // 
             // lblArchivoInfo
@@ -119,7 +119,7 @@
             this.btnSelArchivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSelArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelArchivo.ForeColor = System.Drawing.Color.White;
-            this.btnSelArchivo.Location = new System.Drawing.Point(363, 709);
+            this.btnSelArchivo.Location = new System.Drawing.Point(363, 739);
             this.btnSelArchivo.Name = "btnSelArchivo";
             this.btnSelArchivo.Size = new System.Drawing.Size(218, 36);
             this.btnSelArchivo.TabIndex = 3;
@@ -146,7 +146,7 @@
             this.grpbMejorCal.Controls.Add(this.lblMejorCal);
             this.grpbMejorCal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpbMejorCal.ForeColor = System.Drawing.Color.White;
-            this.grpbMejorCal.Location = new System.Drawing.Point(690, 127);
+            this.grpbMejorCal.Location = new System.Drawing.Point(690, 168);
             this.grpbMejorCal.Name = "grpbMejorCal";
             this.grpbMejorCal.Size = new System.Drawing.Size(233, 75);
             this.grpbMejorCal.TabIndex = 5;
@@ -160,7 +160,7 @@
             this.grpbPeorCal.Controls.Add(this.lblPeorCal);
             this.grpbPeorCal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpbPeorCal.ForeColor = System.Drawing.Color.White;
-            this.grpbPeorCal.Location = new System.Drawing.Point(690, 208);
+            this.grpbPeorCal.Location = new System.Drawing.Point(690, 249);
             this.grpbPeorCal.Name = "grpbPeorCal";
             this.grpbPeorCal.Size = new System.Drawing.Size(233, 78);
             this.grpbPeorCal.TabIndex = 6;
@@ -182,7 +182,7 @@
             this.grpbPromedio.Controls.Add(this.lblPromedio);
             this.grpbPromedio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpbPromedio.ForeColor = System.Drawing.Color.White;
-            this.grpbPromedio.Location = new System.Drawing.Point(690, 292);
+            this.grpbPromedio.Location = new System.Drawing.Point(690, 333);
             this.grpbPromedio.Name = "grpbPromedio";
             this.grpbPromedio.Size = new System.Drawing.Size(233, 84);
             this.grpbPromedio.TabIndex = 6;
@@ -209,7 +209,7 @@
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(10, 69);
+            this.lblFecha.Location = new System.Drawing.Point(10, 94);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(122, 13);
             this.lblFecha.TabIndex = 8;
@@ -219,7 +219,7 @@
             // 
             this.lblTemperatura.AutoSize = true;
             this.lblTemperatura.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTemperatura.Location = new System.Drawing.Point(117, 17);
+            this.lblTemperatura.Location = new System.Drawing.Point(121, 24);
             this.lblTemperatura.Name = "lblTemperatura";
             this.lblTemperatura.Size = new System.Drawing.Size(58, 29);
             this.lblTemperatura.TabIndex = 9;
@@ -228,7 +228,7 @@
             // lblNubes
             // 
             this.lblNubes.AutoSize = true;
-            this.lblNubes.Location = new System.Drawing.Point(11, 45);
+            this.lblNubes.Location = new System.Drawing.Point(10, 44);
             this.lblNubes.Name = "lblNubes";
             this.lblNubes.Size = new System.Drawing.Size(43, 13);
             this.lblNubes.TabIndex = 10;
@@ -237,7 +237,7 @@
             // lblMinMaxTemp
             // 
             this.lblMinMaxTemp.AutoSize = true;
-            this.lblMinMaxTemp.Location = new System.Drawing.Point(88, 46);
+            this.lblMinMaxTemp.Location = new System.Drawing.Point(10, 69);
             this.lblMinMaxTemp.Name = "lblMinMaxTemp";
             this.lblMinMaxTemp.Size = new System.Drawing.Size(92, 13);
             this.lblMinMaxTemp.TabIndex = 11;
@@ -256,7 +256,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(690, 30);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(233, 91);
+            this.groupBox1.Size = new System.Drawing.Size(233, 132);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Clima Actual";
@@ -271,16 +271,16 @@
             // 
             // chartGrafico
             // 
-            chartArea5.Name = "AreaPrincipal";
-            this.chartGrafico.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chartGrafico.Legends.Add(legend5);
-            this.chartGrafico.Location = new System.Drawing.Point(12, 409);
+            chartArea1.Name = "AreaPrincipal";
+            this.chartGrafico.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartGrafico.Legends.Add(legend1);
+            this.chartGrafico.Location = new System.Drawing.Point(12, 439);
             this.chartGrafico.Name = "chartGrafico";
-            series5.ChartArea = "AreaPrincipal";
-            series5.Legend = "Legend1";
-            series5.Name = "Calificaciones";
-            this.chartGrafico.Series.Add(series5);
+            series1.ChartArea = "AreaPrincipal";
+            series1.Legend = "Legend1";
+            series1.Name = "Calificaciones";
+            this.chartGrafico.Series.Add(series1);
             this.chartGrafico.Size = new System.Drawing.Size(911, 292);
             this.chartGrafico.TabIndex = 7;
             this.chartGrafico.Text = "Calificaciones";
@@ -372,7 +372,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(935, 755);
+            this.ClientSize = new System.Drawing.Size(935, 788);
             this.Controls.Add(this.chartGrafico);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grpbPromedio);
