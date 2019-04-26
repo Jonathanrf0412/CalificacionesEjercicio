@@ -52,7 +52,6 @@ namespace CalificacionesEjercicio
         private void btnSelArchivo_Click(object sender, EventArgs e)
         {
             DialogResult resultado = ofdCargarArchivo.ShowDialog();
-            float promedio = 0;
 
             if (resultado == DialogResult.OK)
             {
@@ -96,25 +95,95 @@ namespace CalificacionesEjercicio
                     }
                     #endregion
 
-                    #region CalcularPromedio
+                    #region MejorYPeorCalificacion
+                    dgvMejorCalificacion.Rows.Clear();
+                    dgvPeorCalificacion.Rows.Clear();
+
+                    ListaCalificaciones = ListaCalificaciones.OrderByDescending(item => item.Calificacion).ToList();
+
+                    float calificacion = -1;
+
                     foreach (var registro in ListaCalificaciones)
                     {
-                        promedio += registro.Calificacion;
+                        if (calificacion < 0)
+                        {
+                            dgvMejorCalificacion.Rows.Add(registro.Nombres + " " + registro.ApellidoP + " " + registro.ApellidoM, registro.Calificacion, registro.Grado + "-" + registro.Grupo);
+                            calificacion = registro.Calificacion;
+                        }
+                        else
+                        {
+                            if (calificacion == registro.Calificacion)
+                            {
+                                dgvMejorCalificacion.Rows.Add(registro.Nombres + " " + registro.ApellidoP + " " + registro.ApellidoM, registro.Calificacion, registro.Grado + "-" + registro.Grupo);
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
                     }
 
-                    lblPromedio.Text = (promedio / ListaCalificaciones.Count).ToString();
-                    lblTotalAlumnos.Text = "Total de alumnos: " + ListaCalificaciones.Count;
+                    ListaCalificaciones = ListaCalificaciones.OrderBy(item => item.Calificacion).ToList();
+
+                    calificacion = -1;
+
+                    foreach (var registro in ListaCalificaciones)
+                    {
+                        if (calificacion < 0)
+                        {
+                            dgvPeorCalificacion.Rows.Add(registro.Nombres + " " + registro.ApellidoP + " " + registro.ApellidoM, registro.Calificacion, registro.Grado + "-" + registro.Grupo);
+                            calificacion = registro.Calificacion;
+                        }
+                        else
+                        {
+                            if (calificacion == registro.Calificacion)
+                            {
+                                dgvPeorCalificacion.Rows.Add(registro.Nombres + " " + registro.ApellidoP + " " + registro.ApellidoM, registro.Calificacion, registro.Grado + "-" + registro.Grupo);
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                    }
                     #endregion
 
-                    #region MejorYPeorCalificacion
-                    ListaCalificaciones = ListaCalificaciones.OrderByDescending(item => item.Calificacion).ToList();
-                    int Ultimo = ListaCalificaciones.Count - 1;
+                    #region CalcularPromedio
+                    dgvPromedios.Rows.Clear();
 
-                    lblMejorCal.Text = ListaCalificaciones[0].Nombres + " " + ListaCalificaciones[0].ApellidoP + " " + ListaCalificaciones[0].ApellidoM;
-                    lblMejorGrupo.Text = ListaCalificaciones[0].Grado + "-" + ListaCalificaciones[0].Grupo;
+                    float grupoPromedio = 0;
+                    float globalPromedio = 0;
+                    int countAlumnos = 0;
+                    int grado = 0;
+                    string grupo = "";
 
-                    lblPeorCal.Text = ListaCalificaciones[Ultimo].Nombres + " " + ListaCalificaciones[Ultimo].ApellidoP + " " + ListaCalificaciones[Ultimo].ApellidoM;
-                    lblPeorGrupo.Text = ListaCalificaciones[Ultimo].Grado + "-" + ListaCalificaciones[Ultimo].Grupo;
+                    ListaCalificaciones = ListaCalificaciones.OrderBy(item => item.Grado).ThenBy(item => item.Grupo).ToList();
+                    grado = ListaCalificaciones[0].Grado;
+                    grupo = ListaCalificaciones[0].Grupo;
+
+                    foreach (var registro in ListaCalificaciones)
+                    {
+                        if (grado==registro.Grado && grupo.Equals(registro.Grupo))
+                        {
+                            grupoPromedio += registro.Calificacion;
+                            countAlumnos++;
+                        }
+                        else
+                        {
+                            dgvPromedios.Rows.Add(grado + "-" + grupo, countAlumnos, grupoPromedio / countAlumnos);
+                            grupoPromedio = registro.Calificacion;
+                            countAlumnos = 1;
+                            grado = registro.Grado;
+                            grupo = registro.Grupo;
+                        }
+
+                        globalPromedio += registro.Calificacion;
+                    }
+
+                    dgvPromedios.Rows.Add(grado + "-" + grupo, countAlumnos, grupoPromedio / countAlumnos);
+
+                    lblPromedio.Text = (globalPromedio / ListaCalificaciones.Count).ToString();
+                    lblTotalAlumnos.Text = "Total de alumnos: " + ListaCalificaciones.Count;
                     #endregion
                 }
                 else
